@@ -3,7 +3,7 @@ import pandas as pd
 # TODO: Set weight1, weight2, and bias
 weight1 = 0.75
 weight2 = -0.75
-bias = -0.75
+bias = -0.25
 
 
 # DON'T CHANGE ANYTHING BELOW
