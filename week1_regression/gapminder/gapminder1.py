@@ -15,3 +15,4 @@ bmi_life_model.fit(x_values, y_values)
 # Mak a prediction using the model
 # TODO: Predict life expectancy for a BMI value of 21.07931
 laos_life_exp = bmi_life_model.predict(21.07931)
+
