@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>dlnd_language_translation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>dlnd_language_translation</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11852,9 +11825,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Dataset Stats
 Roughly the number of unique words: 227
@@ -11921,22 +11892,9 @@ les états-unis est parfois occupé en janvier , et il est parfois chaud en nove
 <span class="sd">    :return: A tuple of lists (source_id_text, target_id_text)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">source_id_text</span><span class="p">,</span> <span class="n">target_id_text</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">source_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
-            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">source_vocab_to_int</span><span class="p">[</span><span class="n">word</span><span class="p">])</span>
-        <span class="n">source_id_text</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-        
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">target_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
-            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">target_vocab_to_int</span><span class="p">[</span><span class="n">word</span><span class="p">])</span>
-        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">])</span>
-        <span class="n">target_id_text</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-        
-    <span class="k">return</span> <span class="p">(</span><span class="n">source_id_text</span><span class="p">,</span> <span class="n">target_id_text</span><span class="p">)</span>
+    <span class="n">target_ids</span> <span class="o">=</span> <span class="p">[[</span><span class="n">target_vocab_to_int</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span> <span class="o">+</span> <span class="p">[</span><span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">]]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">target_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+    <span class="n">source_ids</span> <span class="o">=</span> <span class="p">[[</span><span class="n">source_vocab_to_int</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">source_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">source_ids</span><span class="p">,</span> <span class="n">target_ids</span><span class="p">)</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -11952,9 +11910,7 @@ les états-unis est parfois occupé en janvier , et il est parfois chaud en nove
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12063,20 +12019,16 @@ les états-unis est parfois occupé en janvier , et il est parfois chaud en nove
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>TensorFlow Version: 1.3.0
+<pre>TensorFlow Version: 1.2.1
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Users\joonn\Anaconda3\lib\site-packages\ipykernel\__main__.py:15: UserWarning: No GPU found. Please use a GPU to train your neural network.
+<pre>/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/__main__.py:15: UserWarning: No GPU found. Please use a GPU to train your neural network.
 </pre>
 </div>
 </div>
@@ -12154,23 +12106,21 @@ les états-unis est parfois occupé en janvier , et il est parfois chaud en nove
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>ERROR:tensorflow:==================================
 Object was never used (type &lt;class &#39;tensorflow.python.framework.ops.Operation&#39;&gt;):
 &lt;tf.Operation &#39;assert_rank_2/Assert/Assert&#39; type=Assert&gt;
 If you want to mark it as used call its &#34;mark_used()&#34; method.
 It was originally created here:
-[&#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\runpy.py&#34;, line 193, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\traitlets\\config\\application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelapp.py&#34;, line 477, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tornado\\ioloop.py&#34;, line 888, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tornado\\stack_context.py&#34;, line 277, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tornado\\stack_context.py&#34;, line 277, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelbase.py&#34;, line 283, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelbase.py&#34;, line 235, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelbase.py&#34;, line 399, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\zmqshell.py&#34;, line 533, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-7-a9fb32034443&gt;&#34;, line 24, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Desktop\\deep_learning\\3_recurrent_neural_networks\\project-language-translation\\problem_unittests.py&#34;, line 106, in test_model_inputs\n    assert tf.assert_rank(lr, 0, message=\&#39;Learning Rate has wrong rank\&#39;)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\ops\\check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\ops\\check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\util\\tf_should_use.py&#34;, line 175, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\util\\tf_should_use.py&#34;, line 144, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\util\\tf_should_use.py&#34;, line 101, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
+[&#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-7-a9fb32034443&gt;&#34;, line 24, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/deep_learning/3_recurrent_neural_networks/project-language-translation/problem_unittests.py&#34;, line 106, in test_model_inputs\n    assert tf.assert_rank(lr, 0, message=\&#39;Learning Rate has wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
 ==================================
 ERROR:tensorflow:==================================
 Object was never used (type &lt;class &#39;tensorflow.python.framework.ops.Operation&#39;&gt;):
 &lt;tf.Operation &#39;assert_rank_3/Assert/Assert&#39; type=Assert&gt;
 If you want to mark it as used call its &#34;mark_used()&#34; method.
 It was originally created here:
-[&#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\runpy.py&#34;, line 193, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\traitlets\\config\\application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelapp.py&#34;, line 477, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tornado\\ioloop.py&#34;, line 888, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tornado\\stack_context.py&#34;, line 277, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\zmq\\eventloop\\zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tornado\\stack_context.py&#34;, line 277, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelbase.py&#34;, line 283, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelbase.py&#34;, line 235, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\kernelbase.py&#34;, line 399, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\ipykernel\\zmqshell.py&#34;, line 533, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\IPython\\core\\interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-7-a9fb32034443&gt;&#34;, line 24, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;C:\\Users\\joonn\\Desktop\\deep_learning\\3_recurrent_neural_networks\\project-language-translation\\problem_unittests.py&#34;, line 107, in test_model_inputs\n    assert tf.assert_rank(keep_prob, 0, message=\&#39;Keep Probability has wrong rank\&#39;)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\ops\\check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\ops\\check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\util\\tf_should_use.py&#34;, line 175, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\util\\tf_should_use.py&#34;, line 144, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;C:\\Users\\joonn\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\util\\tf_should_use.py&#34;, line 101, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
+[&#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-7-a9fb32034443&gt;&#34;, line 24, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/deep_learning/3_recurrent_neural_networks/project-language-translation/problem_unittests.py&#34;, line 107, in test_model_inputs\n    assert tf.assert_rank(keep_prob, 0, message=\&#39;Keep Probability has wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/dl/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
 ==================================
 Tests Passed
 </pre>
@@ -12223,9 +12173,7 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12297,9 +12245,7 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12367,9 +12313,7 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12442,9 +12386,7 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12475,7 +12417,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer</span><span class="p">(</span><span class="n">dec_input</span><span class="p">,</span> <span class="n">encoder_state</span><span class="p">,</span>
@@ -12499,17 +12441,18 @@ Tests Passed
 <span class="sd">    :return: Tuple of (Training BasicDecoderOutput, Inference BasicDecoderOutput)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">dec_embeddings</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_uniform</span><span class="p">([</span><span class="n">target_vocab_size</span><span class="p">,</span> <span class="n">decoding_embedding_size</span><span class="p">]))</span>    
+    <span class="n">dec_embeddings</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_uniform</span><span class="p">([</span><span class="n">target_vocab_size</span><span class="p">,</span> <span class="n">decoding_embedding_size</span><span class="p">]))</span>
     <span class="n">stack</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">LSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)])</span>
     <span class="n">out_layer</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">target_vocab_size</span><span class="p">,</span> <span class="n">kernel_initializer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
-    
+    <span class="n">dropout_layer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
+
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s1">&#39;decoding&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">decoding_scope</span><span class="p">:</span>
-        <span class="n">decoder_train</span> <span class="o">=</span> <span class="n">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">),</span> 
+        <span class="n">decoder_train</span> <span class="o">=</span> <span class="n">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dropout_layer</span><span class="p">,</span> 
                                          <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">embedding_lookup</span><span class="p">(</span><span class="n">dec_embeddings</span><span class="p">,</span> <span class="n">dec_input</span><span class="p">),</span> 
                                          <span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">max_target_sequence_length</span><span class="p">,</span> 
                                          <span class="n">out_layer</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
         <span class="n">decoding_scope</span><span class="o">.</span><span class="n">reuse_variables</span><span class="p">()</span>
-        <span class="n">decoder_infer</span> <span class="o">=</span> <span class="n">decoding_layer_infer</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">),</span> <span class="n">dec_embeddings</span><span class="p">,</span> 
+        <span class="n">decoder_infer</span> <span class="o">=</span> <span class="n">decoding_layer_infer</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dropout_layer</span><span class="p">,</span> <span class="n">dec_embeddings</span><span class="p">,</span> 
                                          <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;GO&gt;&#39;</span><span class="p">],</span> <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">],</span> 
                                          <span class="n">max_target_sequence_length</span><span class="p">,</span> <span class="n">target_vocab_size</span><span class="p">,</span>
                                          <span class="n">out_layer</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
@@ -12531,9 +12474,7 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12561,7 +12502,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">seq2seq_model</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">target_data</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span>
@@ -12613,9 +12554,7 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12649,22 +12588,22 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="c1"># Batch Size</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">512</span>
 <span class="c1"># RNN Size</span>
 <span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Number of Layers</span>
 <span class="n">num_layers</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="c1"># Embedding Size</span>
-<span class="n">encoding_embedding_size</span> <span class="o">=</span> <span class="mi">128</span>
-<span class="n">decoding_embedding_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">encoding_embedding_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">decoding_embedding_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Learning Rate</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">3</span>
 <span class="c1"># Dropout Keep Probability</span>
 <span class="n">keep_probability</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">display_step</span> <span class="o">=</span> <span class="mi">100</span>
@@ -12687,7 +12626,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12758,7 +12697,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12812,7 +12751,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12885,8 +12824,8 @@ Tests Passed
 
                 <span class="n">train_acc</span> <span class="o">=</span> <span class="n">get_accuracy</span><span class="p">(</span><span class="n">target_batch</span><span class="p">,</span> <span class="n">batch_train_logits</span><span class="p">)</span>
 
-                <span class="n">valid_acc</span> <span class="o">=</span> <span class="n">get_accuracy</span><span class="p">(</span><span class="n">valid_targets_batch</span><span class="p">,</span> <span class="n">batch_valid_logits</span><span class="p">)</span>
-
+                <span class="n">valid_acc</span> <span class="o">=</span> <span class="n">get_accuracy</span><span class="p">(</span><span class="n">valid_targets_batch</span><span class="p">,</span> <span class="n">batch_valid_logits</span><span class="p">)</span>            
+                
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:&gt;3}</span><span class="s1"> Batch </span><span class="si">{:&gt;4}</span><span class="s1">/</span><span class="si">{}</span><span class="s1"> - Train Accuracy: </span><span class="si">{:&gt;6.4f}</span><span class="s1">, Validation Accuracy: </span><span class="si">{:&gt;6.4f}</span><span class="s1">, Loss: </span><span class="si">{:&gt;6.4f}</span><span class="s1">&#39;</span>
                       <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epoch_i</span><span class="p">,</span> <span class="n">batch_i</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">source_int_text</span><span class="p">)</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">train_acc</span><span class="p">,</span> <span class="n">valid_acc</span><span class="p">,</span> <span class="n">loss</span><span class="p">))</span>
 
@@ -12904,25 +12843,28 @@ Tests Passed
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch  100/538 - Train Accuracy: 0.5375, Validation Accuracy: 0.5490, Loss: 1.7981
-Epoch   0 Batch  200/538 - Train Accuracy: 0.5781, Validation Accuracy: 0.5980, Loss: 0.9041
-Epoch   0 Batch  300/538 - Train Accuracy: 0.6620, Validation Accuracy: 0.6490, Loss: 0.6122
-Epoch   0 Batch  400/538 - Train Accuracy: 0.7113, Validation Accuracy: 0.7243, Loss: 0.4639
-Epoch   0 Batch  500/538 - Train Accuracy: 0.8024, Validation Accuracy: 0.7717, Loss: 0.3341
-Epoch   1 Batch  100/538 - Train Accuracy: 0.8441, Validation Accuracy: 0.8169, Loss: 0.2350
-Epoch   1 Batch  200/538 - Train Accuracy: 0.8492, Validation Accuracy: 0.8350, Loss: 0.1791
-Epoch   1 Batch  300/538 - Train Accuracy: 0.8839, Validation Accuracy: 0.8857, Loss: 0.1380
-Epoch   1 Batch  400/538 - Train Accuracy: 0.8994, Validation Accuracy: 0.8828, Loss: 0.1065
-Epoch   1 Batch  500/538 - Train Accuracy: 0.9272, Validation Accuracy: 0.8874, Loss: 0.0761
-Epoch   2 Batch  100/538 - Train Accuracy: 0.9238, Validation Accuracy: 0.9031, Loss: 0.0689
-Epoch   2 Batch  200/538 - Train Accuracy: 0.9543, Validation Accuracy: 0.9169, Loss: 0.0574
-Epoch   2 Batch  300/538 - Train Accuracy: 0.9254, Validation Accuracy: 0.9229, Loss: 0.0654
-Epoch   2 Batch  400/538 - Train Accuracy: 0.9336, Validation Accuracy: 0.9396, Loss: 0.0577
-Epoch   2 Batch  500/538 - Train Accuracy: 0.9586, Validation Accuracy: 0.9148, Loss: 0.0433
+<pre>Epoch   0 Batch  100/269 - Train Accuracy: 0.4885, Validation Accuracy: 0.4940, Loss: 1.8712
+Epoch   0 Batch  200/269 - Train Accuracy: 0.4979, Validation Accuracy: 0.5333, Loss: 1.3555
+Epoch   1 Batch  100/269 - Train Accuracy: 0.5900, Validation Accuracy: 0.5952, Loss: 0.8046
+Epoch   1 Batch  200/269 - Train Accuracy: 0.5902, Validation Accuracy: 0.6056, Loss: 0.7142
+Epoch   2 Batch  100/269 - Train Accuracy: 0.6559, Validation Accuracy: 0.6420, Loss: 0.5565
+Epoch   2 Batch  200/269 - Train Accuracy: 0.6516, Validation Accuracy: 0.6694, Loss: 0.5117
+Epoch   3 Batch  100/269 - Train Accuracy: 0.7446, Validation Accuracy: 0.7230, Loss: 0.3791
+Epoch   3 Batch  200/269 - Train Accuracy: 0.7567, Validation Accuracy: 0.7517, Loss: 0.3262
+Epoch   4 Batch  100/269 - Train Accuracy: 0.8277, Validation Accuracy: 0.8077, Loss: 0.2226
+Epoch   4 Batch  200/269 - Train Accuracy: 0.8294, Validation Accuracy: 0.8307, Loss: 0.1910
+Epoch   5 Batch  100/269 - Train Accuracy: 0.8999, Validation Accuracy: 0.8777, Loss: 0.1329
+Epoch   5 Batch  200/269 - Train Accuracy: 0.9097, Validation Accuracy: 0.8909, Loss: 0.1073
+Epoch   6 Batch  100/269 - Train Accuracy: 0.9197, Validation Accuracy: 0.9053, Loss: 0.0753
+Epoch   6 Batch  200/269 - Train Accuracy: 0.9340, Validation Accuracy: 0.9189, Loss: 0.0615
+Epoch   7 Batch  100/269 - Train Accuracy: 0.9346, Validation Accuracy: 0.9248, Loss: 0.0551
+Epoch   7 Batch  200/269 - Train Accuracy: 0.9468, Validation Accuracy: 0.9289, Loss: 0.0467
+Epoch   8 Batch  100/269 - Train Accuracy: 0.9520, Validation Accuracy: 0.9451, Loss: 0.0433
+Epoch   8 Batch  200/269 - Train Accuracy: 0.9554, Validation Accuracy: 0.9506, Loss: 0.0372
+Epoch   9 Batch  100/269 - Train Accuracy: 0.9608, Validation Accuracy: 0.9526, Loss: 0.0357
+Epoch   9 Batch  200/269 - Train Accuracy: 0.9637, Validation Accuracy: 0.9487, Loss: 0.0297
 Model Trained and Saved
 </pre>
 </div>
@@ -12944,7 +12886,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12970,7 +12912,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13009,7 +12951,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sentence_to_seq</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">vocab_to_int</span><span class="p">):</span>
@@ -13042,9 +12984,7 @@ Model Trained and Saved
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -13067,7 +13007,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">translate_sentence</span> <span class="o">=</span> <span class="s1">&#39;he saw a old yellow truck .&#39;</span>
@@ -13112,17 +13052,15 @@ Model Trained and Saved
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Input
-  Word Ids:      [66, 197, 40, 64, 214, 71, 159]
+  Word Ids:      [215, 78, 68, 88, 21, 150, 230]
   English Words: [&#39;he&#39;, &#39;saw&#39;, &#39;a&#39;, &#39;old&#39;, &#39;yellow&#39;, &#39;truck&#39;, &#39;.&#39;]
 
 Prediction
-  Word Ids:      [269, 276, 223, 141, 260, 48, 61, 1]
-  French Words: il a vu une états-unis rouillé . &lt;EOS&gt;
+  Word Ids:      [46, 320, 117, 154, 151, 120, 191, 1]
+  French Words: il est la petite voiture bleue . &lt;EOS&gt;
 </pre>
 </div>
 </div>
@@ -13146,8 +13084,4 @@ Prediction
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
